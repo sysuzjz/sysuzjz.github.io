@@ -1,0 +1,105 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-size: 16px;
+	font-family: arial,sans-serif;
+	color: #000;
+}
+
+ul, li {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+h1 {
+	font-size: 45px;
+	margin: 20px 0;
+	text-align: center;
+	letter-spacing: 2px;
+}
+
+.clear {
+	clear: both;
+}
+
+.hide {
+	display: none;
+}
+
+#head-content {
+	height: 50px;
+}
+
+#main-content {
+	width: 1000px;
+	margin: 0 auto;
+}
+
+.vote-box {
+	position: relative;
+	float: left;
+	width: 144px;
+	height: 180px;
+	margin: 10px;
+	padding: 10px;
+	background-color: #E7E7E7;
+
+}
+
+.vote-box img.btn-close {
+    position: absolute;
+    right: -10px;
+    top: -10px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.vote-box input {
+	max-width: 144px;
+	line-height: 40px;
+	font-size: 30px;
+	font-weight: bold;
+	margin: 5px 0;
+	text-align: center;
+}
+
+.vote-box .arrows {
+	width:0; 
+	height:0;
+	margin: 20px 0 0 0;
+	cursor: pointer;
+}
+
+.vote-box .arrow-up {
+	float: left;
+	border-left:30px solid transparent; 
+	border-right:30px solid transparent; 
+	border-bottom:30px solid #00F; 
+}
+
+.vote-box .arrow-down {
+	float: right;
+	border-left:30px solid transparent; 
+	border-right:30px solid transparent; 
+	border-top:30px solid #00F; 
+}
+
+#add-user {
+	cursor: pointer;
+}
+
+#add-user img {
+	width: 144px;
+	height: 180px;
+}
+
+.vote-box {
+
+}
