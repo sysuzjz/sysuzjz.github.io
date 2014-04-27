@@ -21,7 +21,6 @@ $("#main-content").on("click", "#add-user", function() {
 })
 
 $("#main-content").on("click", ".btn-close", function() {
-    removeItemInLocalStorage(this);
     var user = getUser(this);
     if(!isValidUser(user) || confirm("确认删除吗？")) {
         $(this).closest('.vote-box').remove();
