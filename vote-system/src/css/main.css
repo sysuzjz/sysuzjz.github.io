@@ -51,7 +51,7 @@ h1 {
 	background-color: #E7E7E7;
 
 }
-
+	
 .vote-box img.btn-close {
     position: absolute;
     right: -10px;
@@ -91,15 +91,68 @@ h1 {
 	border-top:30px solid #00F; 
 }
 
-#add-user {
+.add-user,
+.add-position {
 	cursor: pointer;
 }
 
-#add-user img {
+.add-user img,
+.add-position img {
 	width: 144px;
 	height: 180px;
 }
 
-.vote-box {
+.vote-position {
+	padding: 10px;
+	border-bottom: 2px solid #ccc;
+}
 
+.vote-position .sidebar {
+	float: left;
+	width: 20%;
+	height: 100%;
+	text-align: center;
+}
+
+.vote-position .position-title {
+	width: 100%;
+	font-size: 60px;
+	font-weight: bold;
+	padding: 20px 0;
+	letter-spacing: 3px;
+}
+
+.vote-position img.btn-delete {
+	width: 20%;
+	cursor: pointer;
+}
+
+.vote-position .position-content {
+	float: left;
+	width: 80%;
+}
+
+.vote-list {
+	position: fixed;
+	top: 0;
+	width: 1000px;
+	height: 100%;
+	font-size: 40px;
+	font-weight: bold;
+	padding: 40px 0 0 40px;
+	background-color: #FAFAFA;
+	word-spacing: 50px;
+	letter-spacing: 3px;
+	overflow: auto;
+	z-index: 999;
+}
+
+.vote-list dd {
+	padding-left: 100px;
+}
+
+#list-close {
+	position: absolute;
+	top: 40px;
+	right: 20%;
 }

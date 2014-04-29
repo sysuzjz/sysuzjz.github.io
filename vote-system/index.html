@@ -7,22 +7,44 @@
 	</head>
 	<body>
 		<div id="head-content">
-			<h1>MIAC 投票器</h1>
+			<h1>
+				MIAC 投票器
+				<button id="vote-end">计票</button>
+			</h1>
 		</div>
 		<div id="main-content">
-			<div class="vote-box hide" id="model">
-				<input type="text" class="candidates" />
-				<input type="text" class="votenum" value="0票" readonly="readonly" />
-				<div class="arrows arrow-up"></div>
-				<div class="arrows arrow-down"></div>
-                <img src="src/img/close.jpg" class="btn-close" alt="close button" />
+			<div class="vote-position hide" id="model-position">
+				<div class="sidebar">
+					<div class="position-title"></div>
+					<img src="src/img/close.jpg" class="btn-delete" alt="delete button" />
+				</div>
+				<div class="position-content">
+					<div class="vote-box hide" id="model">
+						<input type="text" class="candidates" />
+						<input type="text" class="votenum" value="0票" readonly="readonly" />
+						<div class="arrows arrow-up"></div>
+						<div class="arrows arrow-down"></div>
+		                <img src="src/img/close.jpg" class="btn-close" alt="close button" />
+					</div>
+					<div class="vote-box add-user" title="增加一个候选人">
+						<img src="src/img/plus.png" alt="加号图片" />
+					</div>	
+				</div>
+				<div class="clear"></div>
 			</div>
-			<div class="vote-box" id="add-user" title="增加一个候选人">
+			<div class="vote-box add-position" title="增加一个职位">
 				<img src="src/img/plus.png" alt="加号图片" />
+			</div>
+			<div class="vote-list hide">
+				<button id="list-close">关闭</button>
+				<dl>
+					
+				</dl>
 			</div>
 		</div>
 	</body>
 
 	<script type="text/javascript" src="lib/jquery-1.10.2.js"></script>
 	<script type="text/javascript" src="src/js/main.js"></script>
+
 </html>
