@@ -42,6 +42,7 @@ $("#main-content").on("click", ".btn-delete", function() {
 })
 
 $("#vote-end").click(function(event) {
+    $(".vote-list dl").html("");
     $(".vote-position").not('.hide').each(function() {
         var count = 0;
         var title = $(this).find(".position-title").text();
