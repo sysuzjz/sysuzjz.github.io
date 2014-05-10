@@ -1,0 +1,246 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+/*CSS选择器尽可能不要用'*',它会对很多其他不需要渲染的元素进行多余的渲染。
+注意,类与类之间规范是用一行隔开的，形如：
+    .a {
+        xxxx
+    }
+
+    .b {
+        xxxx
+    }
+此外你代码里有部分tab没有用space代替。*/
+
+body {
+    background-color: black;
+    font-family: 'Gotham Rounded B','Microsoft YaHei',"微软雅黑",Lucida,Verdana,'Hiragino Sans GB',STHeiti,'WenQuanYi Micro Hei','Droid Sans Fallback','SimSun','sans-serif';
+}
+
+.vote-box {
+    position: relative;
+    height: 250px;
+    width: 200px;
+    float: left;
+    margin: 30px;
+    background-color: white;
+    border-radius: 20%;
+}
+
+#add-user input {
+    margin-left: 31%; 
+    height: 30px;
+    width: 80px;
+    font-size: 24px;
+}
+
+
+.small {
+    position: absolute;
+    left: -60px;
+    top: -20px;
+    width:400px;
+    height: 80px;
+    font-size: 24px;
+    background-color: #baefe8;
+    -webkit-transform:rotate(-35deg);
+    z-index: 2;
+}
+.head{
+    background-color: #708090;
+    text-align: center;
+    font-size: 40px;
+    height: 100px;
+}
+/*css属性的书写顺序是有规范的,尽量按规范写,顺序为：
+定位
+display,positon,left,top.........
+盒模型
+width,height,margin,padding,border.......
+其他
+color,box-shadow,font-size..........
+建议去网上看下关于CSS代码规范的文章
+CSS的书写其实没啥好说的，都是规范问题。*/
+
+.head h3 {
+    font-size: 34px;
+    margin-right: 150px;
+    margin-top: 18px;
+}
+.head h2 {
+    padding-top: 20px;
+    color:white;
+}
+.btn {
+    height: 35px;
+    width: 75px;
+    background-color: #4682b4;
+    color: white;
+    font-size: 18px;
+    border:solid #4682b4;
+    margin-top: 1%;
+    margin-left: 33%;
+    cursor: pointer;
+}
+/*属性说明时':'号后面要有一个空格隔开，你的代码里有少数是没有隔开的。
+还有没有在句尾加';'的情况。*/
+.hide {
+    display: none;
+}
+img {
+    margin-left:23%;
+    margin-top: 6%;
+    border-radius: 100%;
+    border: solid white;
+    width: 100px;
+    height: 100px;
+}
+
+.invisible{
+    width: 100px;
+    height: 10px;
+    margin-left: 28%;
+    margin-bottom: 2%;
+    cursor: pointer;
+    /*opacity: 1;*/
+    border: white;
+    background-color: white;
+}
+
+
+.clear {
+    clear: both;
+}
+
+.candidate-name, .pos {
+    width: 31%;
+    border: none;
+    font-size: 18px;
+    font-weight: bolder;
+    float: left;
+    margin-left: 16%;
+}
+
+.vote-count {
+    float: right;
+    font-size: 20px;
+    font-weight: bolder;
+    margin-right: 20%;
+}
+.content {
+    margin-top: 80px;
+}
+
+
+@-webkit-keyframes shining {
+  0% {
+    box-shadow: 0 0 0px rgba(0, 191, 255, 0.6);
+  }
+
+  50% {
+    box-shadow: 0 0 100px rgba(0, 191, 255, 0.6);
+  }
+
+  100% {
+    box-shadow: 0 0 0px rgba(0, 191, 255,0.6);
+  }
+}
+
+
+.vote-box {
+  -webkit-animation-name: 'shining';
+  -webkit-animation-duration: 2s;
+  -webkit-timing-function: linear;
+  -webkit-animation-iteration-count: infinite
+}
+
+.clear {
+    clear: both;
+}
+
+
+/* patch */
+
+button {
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+
+button:hover {
+    opacity: 0.95;
+}
+
+button#create-title {
+    width: 96%;
+    height: 30px;
+    background: #428BCA;
+    margin: 10px auto;
+    display: block;
+    color: #f1f1f1;
+}
+
+div.title-name {
+    margin-left: 30px;
+    font-size: 36px;
+    color: #EEE;
+    border-bottom: 1px solid #EEE;
+    width: 96%;
+}
+
+div.title-name h3 {
+    display: inline-block;
+}
+
+div.title-name button.sort {
+    background: #ddd;
+    border: none;
+    border-radius: 3px;
+    color: #111;
+    padding: 5px 10px;
+    font-size: 14px;
+    margin-left: 25px;
+    cursor: pointer;
+}
+
+div.title-name button.delete {
+    background-image: url('./images/delete.png');
+    background-size: 20px;
+    float: right;
+    margin-left: 30px;
+    margin-top: 32px;
+    width: 25px;
+    height: 25px;
+    background-color: inherit;
+    border: none;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+a.delete-candidate {
+    width: 20px;
+    height: 20px;
+    background-image: url('./images/delete.png');
+    position: absolute;
+    background-size: 20px;
+    left: 92px;
+    bottom: 3px;
+}
+
+.create-candidate {
+    width: 243px;
+    display: block;
+    margin: 14px auto;
+    clear: both;
+    background: #4CAE4C;
+    border: none;
+    color: #f1f1f1;
+    padding: 5px 0;
+    border-radius: 5px;
+}
+
+.create-candidate:hover {
+    opacity: 0.9;
+}
+

@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset='utf-8'>
+  <title>MIAC投票器</title>
+  <link rel="stylesheet" href="./style/style.css">
+  <link rel="short-cut icon" src="group.jpg" />
+  <link rel = "icon" href = "group.jpg" />
+</head>
+<body>
+  <div class = "head">
+    <h2>2014换届投票器</h2>
+      <div class = "small">
+        <h3>M I A C</h3>
+      </div>
+  </div>
+
+  <div class="content">
+    <ul class='titles' data-bind="foreach:titles">
+      <div class='title'>
+        <div class='title-name' >
+          <h3 class='' data-bind="text:'职位: ' + name"></h3>
+          <button class="sort" data-bind="click:sort">计票</button>  
+          <button class="delete" data-bind="click:$parent.deleteTitle"></button>  
+        </div>
+
+        <ul class='candidates' data-bind="foreach:candidates">
+          <div class="vote-box">
+            <img alt="avatar" data-bind="attr:{src: avatar}" />
+            <input class='candidate-name' placeholder="名字" 
+                   data-bind="value:name, valueUpdate:'afterkeydown'"></input>
+            <div class="vote-count">
+              <span data-bind="text: voteCount"></span>票
+            </div>
+            <button class="btn vote-up" data-bind='click:upvote'>投票</button>
+            <button class="invisible vote-down" data-bind='click:downvote'></button>
+
+            <a class='delete-candidate' href='#' title='delete' data-bind="click:$parent.deleteCandidate"></a>
+          </div>
+        </ul>
+
+        <button class="create-candidate" data-bind="click:createCandidate">新建候选人</button>
+        
+      </div>
+    </ul>
+    <button id='create-title' 
+            data-bind="click:createTitle">新建职位</button>
+  </div>
+
+
+<script src='./lib/knockout-3.1.0.js'></script>
+<script src='./voter.js'></script>
+</body>
+</html>
