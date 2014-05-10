@@ -205,7 +205,7 @@ div.title-name button.sort {
 }
 
 div.title-name button.delete {
-    background-image: url('./images/delete.png');
+    background-image: url('../images/delete.png');
     background-size: 20px;
     float: right;
     margin-left: 30px;
@@ -221,7 +221,7 @@ div.title-name button.delete {
 a.delete-candidate {
     width: 20px;
     height: 20px;
-    background-image: url('./images/delete.png');
+    background-image: url('../images/delete.png');
     position: absolute;
     background-size: 20px;
     left: 92px;
