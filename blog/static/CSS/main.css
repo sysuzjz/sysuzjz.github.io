@@ -1,0 +1,29 @@
+.center {
+    text-align: center;
+}
+
+#content {
+    width: 80%;
+    height: 100%;
+    padding: 0 10%;
+}
+
+.blog-list-title {
+    margin-left: 0;
+    padding-left: 0;
+}
+.blog-list-title:before {
+    content: url("../image/arrow.png");
+    margin-right: 10px;
+}
+
+.blog-list {
+    list-style: square outside url("../image/flower.png");
+}
+
+.list-items {
+    font-size: 24px;
+    margin: 5px 0 5px 40px;
+    vertical-align: middle;
+}
+
