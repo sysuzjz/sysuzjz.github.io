@@ -1,4 +1,4 @@
 sysuzjz.github.io
 =================
 
-github page
+为了建github page而建的一个仓库，主要包含自己平时自娱自乐的东西，以及博客。当前博客链接到外部，打算以后专门为github写一个博客
