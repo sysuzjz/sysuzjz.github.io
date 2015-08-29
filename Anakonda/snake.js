@@ -180,21 +180,14 @@
         var e = event || window.event;
         var keyCode = e.keyCode || e.which;
         var dir = "";
-        switch (keyCode) {
-            case 37:
-                dir = "left";
-                break;
-            case 38:
-                dir = "up";
-                break;
-            case 39:
-                dir = "right";
-                break;
-            case 40:
-                dir = "down";
-                break;
-            default:
-                break;
+        if(keyCode === 37 || keyCode === 65) { // ← 或 A
+            dir = "left";
+        } else if(keyCode === 38 || keyCode === 87) {
+            dir = "up";
+        } else if(keyCode === 39 || keyCode === 68) {
+            dir = "right";
+        } else if(keyCode === 40 || keyCode === 83) {
+            dir = "down";
         }
         updateDirection(dir);
     }
