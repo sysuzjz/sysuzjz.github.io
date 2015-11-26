@@ -61,6 +61,7 @@ if(img) {
     img.addEventListener('mouseover', changeSrc);
     img.addEventListener('mouseout', changeSrc);
     img.addEventListener('click', loading);
+    setInterval(changeSrc, 2000);
 
 }
 
