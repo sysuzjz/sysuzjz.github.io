@@ -1,0 +1,39 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 30px;
+    font-weight: bolder;
+    text-align: center;
+}
+
+.center {
+    text-align: center;
+}
+
+.warning {
+    color: red;
+    font-size: 14px;
+}
+
+.box {
+    display: inline-block;
+    float: left;
+    width: 6%;
+    height: 10px;
+    border: 1px solid #ccc;
+    transition: 2s cubic-bezier(0,0,0.7,1);
+}
+
+.box:hover {
+    margin-top: -30px;
+}
+
+
+#img-change {
+    width: 60%;
+    height: auto;
+    cursor: pointer;
+}
