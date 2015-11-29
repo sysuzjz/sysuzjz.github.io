@@ -34,7 +34,6 @@ if(img) {
     var srcs = [
         'http://img.ivsky.com/img/tupian/pre/201509/06/haitan_de_shitou.jpg',
         'http://img.ivsky.com/img/tupian/pre/201509/06/haitan_de_shitou-001.jpg',
-        'http://img.ivsky.com/img/tupian/pre/201509/06/haitan_de_shitou-002.jpg',
         'http://img.ivsky.com/img/tupian/pre/201509/06/haitan_de_shitou-003.jpg',
         'http://img.ivsky.com/img/tupian/pre/201509/06/haitan_de_shitou-004.jpg',
         'http://img.ivsky.com/img/tupian/pre/201509/06/haitan_de_shitou-005.jpg',
