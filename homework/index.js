@@ -32,14 +32,14 @@ if(document.getElementById('boxes-wrap')) {
 var img = document.getElementById('img-change');
 if(img) {
     var srcs = [
-        'http://img1.imgtn.bdimg.com/it/u=742207910,1417059551&fm=21&gp=0.jpg',
-        'http://pic65.nipic.com/file/20150421/20828630_110622049000_2.jpg',
-        'http://pic39.nipic.com/20140321/9448607_215633671000_2.jpg',
-        'http://pic49.nipic.com/file/20140928/4949133_154705706000_2.jpg',
-        'http://pic28.nipic.com/20130502/11772420_132015367131_2.jpg',
-        'http://pic43.nipic.com/20140711/9301655_160101881000_2.jpg',
-        'http://v1.qzone.cc/skin/201310/08/17/19/5253ce06a29c2425.jpg%21600x600.jpg',
-        'http://pic19.nipic.com/20120323/485395_164257185000_2.jpg'
+        'http://img.ivsky.com/img/tupian/pre/201509/06/haitan_de_shitou.jpg',
+        'http://img.ivsky.com/img/tupian/pre/201509/06/haitan_de_shitou-001.jpg',
+        'http://img.ivsky.com/img/tupian/pre/201509/06/haitan_de_shitou-002.jpg',
+        'http://img.ivsky.com/img/tupian/pre/201509/06/haitan_de_shitou-003.jpg',
+        'http://img.ivsky.com/img/tupian/pre/201509/06/haitan_de_shitou-004.jpg',
+        'http://img.ivsky.com/img/tupian/pre/201509/06/haitan_de_shitou-005.jpg',
+        'http://img.ivsky.com/img/tupian/pre/201509/06/haitan_de_shitou-006.jpg',
+        'http://img.ivsky.com/img/tupian/pre/201509/06/haitan_de_shitou-007.jpg'
     ];
     var getRand = function(num) {
         return parseInt(Math.random() * num);
