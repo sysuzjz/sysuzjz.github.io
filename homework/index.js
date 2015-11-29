@@ -53,7 +53,7 @@ if(img) {
     var loading = function() {
         document.body.innerHTML = "<h1>loading...</h1>";
         setTimeout(function() {
-            window.location.href = "toall.html";
+            window.location.href = "toall.htm";
         }, 3000);
     }
 
