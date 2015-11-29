@@ -32,11 +32,12 @@ if(document.getElementById('boxes-wrap')) {
 var img = document.getElementById('img-change');
 if(img) {
     var srcs = [
-        'http://img.ivsky.com/img/tupian/pre/201509/06/haitan_de_shitou.jpg',
-        'http://img.ivsky.com/img/tupian/pre/201509/06/haitan_de_shitou-001.jpg',
-        'http://img.ivsky.com/img/tupian/pre/201509/06/haitan_de_shitou-003.jpg',
-        'http://img.ivsky.com/img/tupian/pre/201509/06/haitan_de_shitou-006.jpg',
-        'http://img.ivsky.com/img/tupian/pre/201509/06/haitan_de_shitou-007.jpg'
+        '1.jpg',
+        '2.jpg',
+        '3.jpg',
+        '4.jpg',
+        '5.jpg',
+        '6.jpg'
     ];
     var getRand = function(num) {
         return parseInt(Math.random() * num);
