@@ -11,10 +11,20 @@
         </style>
     </head>
     <body>
-        <canvas id="canvas" width="800" height="600">
+        <div>
+            <button id="btn-control" data-type="0">start</button>
+            <input type="checkbox" id="music-controller" checked="checked"> 音乐
+            <input type="checkbox" id="sound-controller" checked="checked"> 音效
+        </div>
+        <canvas id="canvas" width="800" height="500">
             您的浏览器不支持canvas，请使用高级浏览器！
         </canvas>
-        <button id="btn-control" data-type="0">start</button>
+        <audio id="music" loop="loop"> 
+            <source src="banana.mp3" type="audio/mp3">
+        </audio>
+        <audio id="sound"> 
+            <source src="laugh.mp3" type="audio/mp3">
+        </audio>
     </body>
     <script type="text/javascript" src="snake.js"></script>
 </html>

@@ -3,22 +3,59 @@
         WIDTH = canvasNode.width,
         HEIGHT = canvasNode.height,
         MAXLEVEL = 8;
-        if(canvasNode.getContext) {
-            var canvas = canvasNode.getContext("2d");
-        }
     var controller = null,
         snakeBody = Array(),
         apple = new Position(0, 0),
         direction = new Position(1, 0),
-        width = 10,
-        height = 10,
+        width = 20,
+        height = 20,
         marks = 0,
         level = 1,
-        markLevel = Array(),
-        speed = Array();
+        markLevel = Array(10, 20, 30, 40, 50, 60, 70, 80),
+        speed = Array(480, 360, 240, 180, 120, 90, 60, 30);
+    /************************ 音乐模块 start *******************************/
+    var music = document.getElementById('music'),
+        sound = document.getElementById('sound'),
+        musicController = document.getElementById('music-controller'),
+        soundController = document.getElementById('sound-controller'),
+        soundValid = true;
+
+    // 背景音乐调小声
+    music.volume = 0.3;
+    music.play();
+
+    musicController.onclick = function() {
+        if (this.checked) {
+            music.play();
+        }
+        else {
+            music.pause();
+        }
+    }
+    soundController.onclick = function() {
+        soundValid = this.checked;
+    }
+    function alertSound() {
+        if (!soundValid) {
+            return;
+        }
+        if (!sound.currentTime || sound.ended) {
+            sound.play();
+        }
+        else {
+            sound.currentTime = 0;
+        }
+    }
+
+    /************************ 音乐模块 end ********************************/
 
     var controlBtn = document.getElementById("btn-control");
     controlBtn.addEventListener("click", control);
+
+
+    if(canvasNode.getContext) {
+        var canvas = canvasNode.getContext("2d");
+    }
 
     function Position(x, y) {
         return {
@@ -87,11 +124,7 @@
         }
         randomApple();
         direction = new Position(1, 0);
-        width = 10;
-        height = 10;
         marks = 0;
-        markLevel = Array(0, 1, 2, 3, 4, 5, 6, 7);
-        speed = Array(1280, 640, 320, 160, 80, 40, 20, 10);
     }
 
     function act() {
@@ -101,6 +134,7 @@
             stop();
             fail();
         } else if(isApple(nextPosition)) {
+            alertSound();
             grow();
             randomApple();
             addMarks();
@@ -115,7 +149,7 @@
         if(initLevel > 0 && initLevel <= MAXLEVEL) {
             level = initLevel;
         } else if(initLevel > MAXLEVEL) {
-            level = 10;
+            level = MAXLEVEL;
         } else {
             level = 1;
         }
@@ -153,8 +187,12 @@
 
     function drawApple() {
         canvas.beginPath();
-        canvas.arc(apple.x + width / 2, apple.y + height / 2, width / 2, 0, Math.PI*2, true); 
-        canvas.fillStyle = "red";
+        // canvas.arc(apple.x + width / 2, apple.y + height / 2, width / 2, 0, Math.PI*2, true); 
+        // canvas.fillStyle = "red";
+        var img = new Image();
+        img.src = './banana.png';
+        canvas.globalCompositeOperation = 'destination-over';
+        canvas.drawImage(img, apple.x, apple.y, width, height);
         canvas.fill();
     }
 
@@ -242,7 +280,7 @@
     }
 
     function levelControl() {
-        if(marks >= markLevel[level] && level < markLevel.length - 1) {
+        if(marks >= markLevel[level] && level < markLevel.length - 1 && level + 1 <= MAXLEVEL) {
             level++;
             speedUp();
         }
@@ -254,8 +292,11 @@
     }
 
     function fail() {
-        alert("您输了");
-        setBtnStart();
+    	// 先draw再弹窗
+    	setTimeout(function() {
+	        alert("您输了");
+	        setBtnStart();
+    	},10);
     }
 
 
