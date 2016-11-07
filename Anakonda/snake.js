@@ -241,21 +241,26 @@
     }
 
     function updateDirection(dir) {
+        var tempDirection;
         switch(dir) {
             case "up":
-                direction = new Position(0, -1);
+                tempDirection = new Position(0, -1);
                 break;
             case "right":
-                direction = new Position(1, 0);
+                tempDirection = new Position(1, 0);
                 break;
             case "down":
-                direction = new Position(0, 1);
+                tempDirection = new Position(0, 1);
                 break;
             case "left":
-                direction = new Position(-1, 0);
+                tempDirection = new Position(-1, 0);
                 break;
             default:
                 break;
+        }
+        // 逆行不会判失败，无视逆行
+        if (tempDirection && !isPositionOpposite(tempDirection, direction)) {
+            direction = tempDirection;
         }
     }
 
@@ -264,6 +269,11 @@
         var head = snakeBody[0],
             nextPosition = new Position(head.x + dir.x * width, head.y + dir.y * height);
         return nextPosition;
+    }
+
+    function isPositionOpposite(position1, position2) {
+        return (position1.x === position2.x && position1.y === -position2.y) ||
+            (position1.y === position2.y && position1.x === -position2.x);
     }
 
     function isApple(position) {
