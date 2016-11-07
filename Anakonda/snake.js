@@ -159,9 +159,19 @@
     function draw() {
         // 清空重绘
         canvas.clearRect(0, 0, WIDTH, HEIGHT);
+        drawBg();
         drawText();
         drawSnake();
         drawApple();
+    }
+
+    function drawBg() {
+        var img = new Image();
+        img.src = './background.jpeg';
+        canvas.globalCompositeOperation = 'source-over';
+        canvas.globalAlpha = 0.25;
+        canvas.drawImage(img, 0, 0, WIDTH, HEIGHT);
+        canvas.globalAlpha = 1;
     }
 
     function drawText() {
