@@ -1,0 +1,15 @@
+.hide {
+	display: none;
+}
+
+.board button {
+	font-size: 16px;
+}
+.custom-board {
+	margin-top: 10px;
+}
+.board input {
+	width: 50px;
+	font-size: 16px;
+	margin-right: 10px;
+}

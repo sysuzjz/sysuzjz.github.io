@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>扫雷游戏设计</title>
+        <meta charset="utf-8">
+        <meta name="keyword" value="扫雷">
+        <link rel="stylesheet" type="text/css" href="./index.css">
+    </head>
+    <body>
+        <div class="board">
+            <label>难度选择</label>
+            <button id="btn-low">初级</button>
+            <button id="btn-medium">中级</button>
+            <button id="btn-high">高级</button>
+            <button id="btn-custom">自定义</button>
+
+            <div class="custom-board">
+                <label>宽:</label>
+                <input type="number" id="input-col" min="10" max="80" step="1" value="10" />
+                <label>高:</label>
+                <input type="number" id="input-row" min="10" max="80" step="1" value="10" />
+                <label>雷数:</label>
+                <input type="number" id="input-mine" min="10" max="99" step="1" value="10" />
+            </div>
+        </div>
+
+
+        <canvas id="canvas" width="500" height="500">
+            您的浏览器不支持canvas，请使用高级浏览器！
+        </canvas>
+        <audio id="music" autoplay="autoplay" loop="loop"> 
+            <source src="banana.mp3" type="audio/mp3">
+        </audio>
+        <audio id="sound"> 
+            <source src="laugh.mp3" type="audio/mp3">
+        </audio>
+    </body>
+    <script type="text/javascript" src="snake.js"></script>
+</html>
