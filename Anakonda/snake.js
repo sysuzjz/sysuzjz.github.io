@@ -167,7 +167,7 @@
 
     function drawBg() {
         var img = new Image();
-        img.src = './background.jpeg';
+        img.src = './img/background.jpeg';
         canvas.globalCompositeOperation = 'source-over';
         canvas.globalAlpha = 0.25;
         canvas.drawImage(img, 0, 0, WIDTH, HEIGHT);
@@ -200,7 +200,7 @@
         // canvas.arc(apple.x + width / 2, apple.y + height / 2, width / 2, 0, Math.PI*2, true); 
         // canvas.fillStyle = "red";
         var img = new Image();
-        img.src = './banana.png';
+        img.src = './img/banana.png';
         canvas.globalCompositeOperation = 'destination-over';
         canvas.drawImage(img, apple.x, apple.y, width, height);
         canvas.fill();
