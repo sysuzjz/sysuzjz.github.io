@@ -72,7 +72,9 @@
 	function draw() {
 		context.clearRect(0, 0, width, height);
 		context.strokeStyle = '#777';
+		context.beginPath();
 		for (var col = 0; col <= colNum; col++) {
+			console.log(col * length, rowNum * length)
 			context.moveTo(col * length, 0);
 			context.lineTo(col * length, rowNum * length);
 			context.stroke();
@@ -82,6 +84,7 @@
 			context.lineTo(colNum * length, row * length);
 			context.stroke();
 		}
+		context.closePath();
 	}
 
 	function initData() {
