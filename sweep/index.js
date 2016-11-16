@@ -20,6 +20,9 @@
 		rowNum = 10,
 		mineNum = 10;
 
+	var started = false,
+		ended = false;
+
 	/*********  控制部分start  ***************/
 	var colInput = document.querySelector('#input-col'),
 		rowInput = document.querySelector('#input-row'),
@@ -230,7 +233,11 @@
 		canvas.removeEventListener('click', clickHandler);
 	}
 	function success() {
+		if (ended) {
+			return;
+		}
 		alert('胜利了');
+		ended = true;
 		canvas.removeEventListener('click', clickHandler);
 	}
 
