@@ -11,7 +11,7 @@
         height = 20,
         marks = 0,
         level = 1,
-        markLevel = Array(10, 20, 30, 40, 50, 60, 70, 80),
+        markLevel = Array(5, 10, 20, 30, 45, 60, 80, 100),
         speed = Array(480, 360, 240, 180, 120, 90, 60, 30);
     /************************ 音乐模块 start *******************************/
     var music = document.getElementById('music'),
@@ -300,7 +300,7 @@
     }
 
     function levelControl() {
-        if(marks >= markLevel[level] && level < markLevel.length - 1 && level + 1 <= MAXLEVEL) {
+        if(marks >= markLevel[level - 1] && level < markLevel.length - 1 && level + 1 <= MAXLEVEL) {
             level++;
             speedUp();
         }
