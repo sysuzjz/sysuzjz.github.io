@@ -15,7 +15,7 @@ $('#confirm-level').on('click', () => {
 });
 $('#switch-candidate').on('click', function() {
     isShowCandidateKeyboards = !isShowCandidateKeyboards;
-    $(this).text(isShowCandidateKeyboards ? '停用候选提示' : '启用候选提示');
+    $(this).text(isShowCandidateKeyboards ? '停用提示' : '启用提示');
 });
 
 $('.sudoku-wrap').on('click', '.sudoku-item', function() {
