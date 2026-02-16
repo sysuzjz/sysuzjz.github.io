@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>猜数字</title>
+    <link rel="stylesheet" type="text/css" href="reset.css">
+    <link rel="stylesheet" type="text/css" href="guessNumber.css">
+</head>
+<body>
+    <div class="input-area">
+        <div class="input-numbers-wrap">
+            <span class="input-number"></span>
+            <span class="input-number"></span>
+            <span class="input-number"></span>
+            <span class="input-number"></span>
+        </div>
+        <div class="keyboard-wrap">
+            <div class="keyboard-row">
+                <span class="keyboard-item" data-value="1">1</span>
+                <span class="keyboard-item" data-value="2">2</span>
+                <span class="keyboard-item" data-value="3">3</span>
+            </div>
+            <div class="keyboard-row">
+                <span class="keyboard-item" data-value="4">4</span>
+                <span class="keyboard-item" data-value="5">5</span>
+                <span class="keyboard-item" data-value="6">6</span>
+            </div>
+            <div class="keyboard-row">
+                <span class="keyboard-item" data-value="7">7</span>
+                <span class="keyboard-item" data-value="8">8</span>
+                <span class="keyboard-item" data-value="9">9</span>
+            </div>
+            <div class="keyboard-row">
+                <span class="keyboard-item" data-value="clear">x</span>
+                <span class="keyboard-item" data-value="0">0</span>
+                <span class="keyboard-item" data-value="delete">←</span>
+            </div>
+        </div>
+    </div>
+    <div class="result-area">
+        <div class="try-time-wrap">
+            <span class="try-time-text">当前已尝试：</span>
+            <span id="try-time-count">0</span>
+            <span class="try-time-text">次</span>
+        </div>
+        <div class="tip-time-wrap">
+            <span class="tip-time-text">当前已提示：</span>
+            <span id="tip-time-count">0</span>
+            <span class="tip-time-text">次</span>
+        </div>
+        <div class="history-time-wrap">
+            <span class="history-time-text">历史最快：</span>
+            <span id="history-time-count">0</span>
+            <span class="history-time-text">次</span>
+        </div>
+        <div class="records-wrap">
+            <div class="record-tip-row">
+                A：数字对，位置也对<br />
+                B：数字对，位置不对
+            </div>
+            <div class="record-row">
+                <span class="record-index">1</span>
+                <span class="record-number">1234</span>
+                <span class="record-result">0A0B</span>
+            </div>
+        </div>
+    </div>
+    <div class="control-area">
+        <button class="control-button" id="reset-history">重置历史记录</button>
+        <button class="control-button" id="reset">重置</button>
+        <button class="control-button" id="tip">提示</button>
+    </div>
+    <div class="tip-area">
+        <p class="tip-row">4不在第四位</p>
+    </div>
+</body>
+<script type="text/javascript" src="guessNumber.js"></script>
+</html>

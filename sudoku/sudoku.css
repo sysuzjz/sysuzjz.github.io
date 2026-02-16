@@ -1,0 +1,101 @@
+.game-area-wrap {
+    margin: 20px 0;
+    padding-left: 400px;
+}
+
+.sudoku-wrap {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.sudoku-row {
+    display: flex;
+    line-height: 0;
+}
+
+.sudoku-row:nth-of-type(3n) .sudoku-item {
+    border-bottom: 1px solid #111;
+}
+
+.sudoku-row:first-of-type .sudoku-item {
+    border-top: 1px solid #111;
+}
+
+.sudoku-item {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
+    line-height: 28px;
+    vertical-align: middle;
+    text-align: center;
+    background-color: #ffebcd;
+    border: 1px solid #ddd;
+}
+
+.sudoku-item:first-of-type {
+    border-left: 1px solid #111;
+}
+
+.sudoku-item:nth-of-type(3n) {
+    border-right: 1px solid #111;
+}
+
+.sudoku-item.selected {
+    animation: flash 1s infinite ease;
+}
+@keyframes flash {
+    0% {
+        background-color: rgba(0, 0, 255, 0.4);
+    }
+    50% {
+        background-color: rgba(0, 0, 255, 0.25);
+    }
+    100% {
+        background-color: rgba(0, 0, 255, 0.4);
+    }
+}
+
+.sudoku-item.origin {
+    background-color: #deb887;
+}
+
+.sudoku-item.error {
+    background-color: #ff0000;
+}
+
+
+.keyboard-wrap .keyboard-row {
+    margin-top: 5px ;
+    padding-left: 35px;
+}
+
+.keyboard-item {
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: bold;
+    text-align: center;
+    margin: 5px 5px;
+    background: #e0e0e0;
+    user-select: none;
+    cursor: pointer;
+    border-radius: 2px;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+    transition: all 0.2s ease;
+}
+
+.keyboard-item.block {
+    width: 114px;
+}
+
+.keyboard-item:active {
+    background: #EEE;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.keyboard-item.candidate {
+    background: #5de351;
+}

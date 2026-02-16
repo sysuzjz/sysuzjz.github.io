@@ -1,0 +1,127 @@
+
+.input-area {
+    display: inline-block;
+    width: 400px;
+}
+
+.input-numbers-wrap {
+    text-align: center;
+}
+
+.input-number {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    margin: 10px 6px;
+    padding: 3px 5px;
+    font-size: 20px;
+    line-height: 35px;
+    font-weight: bold;
+    text-align: center;
+    vertical-align: top;
+    background-color: #F0F0F0;
+    border: 1px solid #DDD;
+    border-radius: 5px;
+}
+
+.keyboard-wrap .keyboard-row {
+    margin: 5px auto;
+    text-align: center;
+}
+
+.keyboard-item {
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: bold;
+    text-align: center;
+    margin: 5px 5px;
+    background: #e0e0e0;
+    user-select: none;
+    cursor: pointer;
+    border-radius: 2px;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+    transition: all 0.2s ease;
+}
+
+.keyboard-item:active {
+    background: #EEE;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.result-area {
+    display: inline-block;
+    width: 500px;
+    vertical-align: top;;
+}
+
+
+.try-time-wrap, .tip-time-wrap, .history-time-wrap {
+    margin: 5px 0;
+    text-align: center;
+}
+
+.try-time-text, .tip-time-text, .history-time-text {
+    font-size: 18px;
+}
+
+#try-time-count, #tip-time-count, #history-time-count {
+    font-size: 20px;
+    color: green;
+    font-weight: bold;
+    padding: 0 5px;
+}
+
+.records-wrap {
+    display: block;
+    width: 200px;
+    margin: 20px auto 0;
+    padding: 5px 20px;
+    background-color: #F0F0F0;
+}
+
+.tip-area {
+    display: block;
+    width: 240px;
+    margin-top: 20px;
+    margin-left: 60px;
+    padding: 5px 20px;
+    background-color: #F0F0F0;
+
+}
+.record-tip-row {
+    margin: 5px 0 20px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.record-row {
+    margin: 5px 0;
+    font-size: 16px;
+    text-align: center;
+}
+
+.record-row span {
+    padding: 0 10px;
+}
+
+.control-area {
+    width: 400px;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.control-button {
+    display: inline-block;
+    width: 60px;
+    height: 30px;
+    font-size: 20px;
+    line-height: 26px;
+    margin: 0 5px;
+}
+
+.control-button#reset-history {
+    width: 150px;
+}
