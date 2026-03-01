@@ -1,0 +1,130 @@
+canvas {
+    border: 1px solid #ccc;
+}
+
+@media screen and (max-width: 1280px) {
+    canvas {
+        width: 80%;
+        margin: 20px auto;
+    }
+    * {
+        font-size: 30px;
+    }
+    input[type=checkbox] {
+        width: 25px;
+        height: 25px;
+        margin-left: 10px;
+    }
+}
+
+.hide {
+    display: none !important;
+}
+.direction-control-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+.direction-vertical, .direction-horizon {
+    position: relative;
+    width: 50px;
+    height: 150px;
+    border: 1px solid #333;
+    font-size: 50px;
+    line-height: 150px;
+    text-align: center;
+    vertical-align: middle;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+.direction-vertical, .direction-vertical::after, .direction-horizon, .direction-horizon::after  {
+    cursor: pointer;
+}
+
+.direction-vertical:active, .direction-vertical:active::after, .direction-horizon:active, .direction-horizon:active::after  {
+    background: #EEE;
+}
+
+.direction-horizon {
+    width: 150px;
+    height: 50px;
+    line-height: 50px;
+}
+
+.direction-horizon-wrap {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.direction-empty {
+    width: 75px;
+    height: 75px;
+    border: none;
+}
+
+.direction-up {
+    border-top: none;
+}
+.direction-down {
+    border-bottom: none;
+}
+.direction-left {
+    border-left: none;
+}
+.direction-right {
+    border-right: none;
+}
+.direction-up::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    top: 0;
+    left: 0;
+    border-top: 1px solid #333;
+    border-right: 1px solid #333;
+    transform: rotate(-45deg);
+    transform-origin: 0 0;
+}
+.direction-down::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    bottom: -35px;
+    right: -35px;
+    border-top: 1px solid #333;
+    border-right: 1px solid #333;
+    transform: rotate(135deg);
+    transform-origin: 0 0;
+}
+.direction-left::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    top: 50px;
+    left: 0px;
+    border-top: 1px solid #333;
+    border-right: 1px solid #333;
+    transform: rotate(-135deg);
+    transform-origin: 0 0;
+}
+.direction-right::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    top: 0;
+    right: -35px;
+    border-top: 1px solid #333;
+    border-right: 1px solid #333;
+    transform: rotate(45deg);
+    transform-origin: 0 0;
+}

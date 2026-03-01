@@ -52,6 +52,13 @@
     var controlBtn = document.getElementById("btn-control");
     controlBtn.addEventListener("click", control);
 
+    document.querySelector('.direction-control-wrap').addEventListener('click', function(event) {
+        let direction = event.target.getAttribute && event.target.getAttribute('data-direction');
+        if (direction) {
+            updateDirection(direction);
+        }
+    });
+
 
     if(canvasNode.getContext) {
         var canvas = canvasNode.getContext("2d");

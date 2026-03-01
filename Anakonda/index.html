@@ -4,20 +4,15 @@
         <title>小黄人“吃”恋香蕉</title>
         <meta charset="utf-8">
         <meta name="keyword" value="贪吃蛇">
-        <style type="text/css">
-            canvas {
-                border: 1px solid #ccc;
-            }
-            .hide {
-                display: none !important;
-            }
-        </style>
+        <link rel="stylesheet" type="text/css" href="snake.css">
     </head>
     <body>
         <div>
             <button id="btn-control" data-type="0">start</button>
-            <input type="checkbox" id="music-controller" checked="checked"> 音乐
-            <input type="checkbox" id="sound-controller" checked="checked"> 音效
+            <input type="checkbox" id="music-controller" name="music-controller" checked="checked">
+            <label for="music-controller">音乐</label>
+            <input type="checkbox" id="sound-controller" name="sound-controller" checked="checked">
+            <label for="sound-controller">音效</label>
         </div>
         <!-- 预加载图片 -->
         <img class="hide" src="./img/background.jpeg">
@@ -27,6 +22,15 @@
         <canvas id="canvas" width="500" height="500">
             您的浏览器不支持canvas，请使用高级浏览器！
         </canvas>
+        <div class="direction-control-wrap">
+            <div class="direction-vertical direction-up" data-direction="up">↑</div>
+            <div class="direction-horizon-wrap">
+                <div class="direction-horizon direction-left" data-direction="left">←</div>
+                <div class="direction-horizon direction-empty"></div>
+                <div class="direction-horizon direction-right" data-direction="right">→</div>
+            </div>
+            <div class="direction-vertical direction-down" data-direction="down">↓</div>
+        </div>
         <audio id="music" autoplay="autoplay" loop="loop"> 
             <source src="./video/banana.mp3" type="audio/mp3">
         </audio>
